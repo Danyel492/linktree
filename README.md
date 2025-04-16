@@ -38,7 +38,7 @@ Este é um projeto simples de **Linktree** desenvolvido para a maquiadora profis
 
 ## 🔧 Configuração
 
-    - No arquivo `index.html` você encontrará a seguinte estrutura:
+- No arquivo `index.html` você encontrará a seguinte estrutura:
 
     ```bash
     <div class="list-container">
