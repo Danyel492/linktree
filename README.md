@@ -1,6 +1,6 @@
 # Lista de Links - linktree
 
->!IMPORTANT
+>[!IMPORTANT]
 >
 >Esse é uma cópia do projeto real que desenvolvi para uma maquiadora. Algumas informações dela foram mantidas. No caso do você querer usar como base para o seu prório projeto, lembre-se de alterar os parâmetros necessários.
 
@@ -60,7 +60,7 @@ Este é um projeto simples de **Linktree** desenvolvido para a maquiadora profis
 
         </div>
     ```
->!IMPORTANT
+>[!IMPORTANT]
 >
 >Você pode querer adicionar mais links. É só seguir o mesmo padrão de *id* da tag <a> e acrescentar no arquivo `script.js`.
 
@@ -74,7 +74,7 @@ const messages = {
     contactLink: "Mensagem personalizada para o contato"};
  ```
 
- >!INFO
+ >[!INFO]
  >
  >No codigo do projeto está uma menssagem genérica. Ao alterar a const phoneNumber, essas mensagens que serão enviadas para o numero.
 
