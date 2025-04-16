@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=SUSE:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SUSE;
+}
+body {
+    display: flex;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para o pseudo-elemento */
+    overflow: hidden; /* Garante que o pseudo-elemento não ultrapasse os limites */
+    background-color: black;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/background.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4; /* Define a opacidade da imagem */
+    z-index: -1; /* Garante que fique atrás do conteúdo */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.26);
+    width: 100%;
+    box-shadow: 2px 3px 3px #0000005b;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 450px;
+}
+
+.list-container, .list-container div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.list-container {
+    width: 90%;
+}
+
+.list-container a {
+    height: 3.5rem;
+    border-radius: .3rem;
+    font-size: 1rem;
+    background-color: #ffffffbd;
+    text-decoration: none;
+    margin: .2rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: .5rem;
+    font-family: "Antic Didone", sans;
+    font-weight: 500;
+    color: white;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+header label{
+    margin-bottom: .5rem;
+}
+section {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section p{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    line-height: 1.7rem;
+}
+
+button {
+    height: 3rem;
+    background-color: #fd9ee1;
+    border-radius: .3rem;
+    border: #a2f7a2;
+    box-shadow: 2px 3px 3px #0000005b;
+    font-size: 1.1rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    height: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.274);
+    font-weight: 300;
+    font-family: "Antic Didone", sans;
+    
+}
+
+
+.aguarde {
+    background-color: #000000ad;
+    color: orange;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aguarde .fundo {
+    background-color: white;
+    width: 85%;
+    height: 10rem;
+    border-radius: 1rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    max-width: 500px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+.sucesso {
+    background-color: #000000ad;
+    color: green;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.sucesso .fundo {
+    background-color: white;
+    width: 85%;
+    height: 10rem;
+    border-radius: 1rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    max-width: 500px;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+.texto-sucesso span, a{
+    color: black;
+    font-size: 1rem;
+    
+}
+
+.texto-sucesso .instagram {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img { 
+    width: 1.5rem;
+    margin-right: .5rem;
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-height: 800px) {
+
+    section p {
+        font-size: 1.3rem; /* Aumenta o tamanho do texto */
+        line-height: 2rem;
+    }
+
+    button {
+        font-size: 1.1rem; /* Aumenta o tamanho do texto do botão */
+    }
+}
+
+@media (min-width: 800px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    button {
+        font-size: 1.1rem; /* Aumenta o tamanho do texto do botão */
+    }
+}
+
+.loader {
+    border: 4px solid #7a7a7a; /* Borda externa */
+    border-top: 4px solid orange; /* Cor da borda superior */
+    border-radius: 50%; /* Deixa o elemento circular */
+    width: 40px; /* Largura da bolinha */
+    height: 40px; /* Altura da bolinha */
+    animation: spin 1s linear infinite; /* Animação de rotação */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Início da rotação */
+    }
+    100% {
+        transform: rotate(360deg); /* Fim da rotação */
+    }
+}
